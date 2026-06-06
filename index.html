@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Júlia Roberta — Lash Lifting & Brow Lamination | Cerquilho-SP</title>
+  <meta name="description" content="Lash Lifting e Brow Lamination em Cerquilho-SP. Realce sua beleza natural com técnica, delicadeza e um olhar único. Agende com a Júlia Roberta." />
+  <meta name="theme-color" content="#FAF5F1" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Júlia Roberta — Lash & Brow Designer | Cerquilho-SP" />
+  <meta property="og:description" content="Realce o que já é bonito em você. Lash Lifting e Brow Lamination com técnica e delicadeza." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+
+  <!-- Favicon (monograma) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23CFA1A0'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='600' fill='white' text-anchor='middle'%3EJR%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #FAF5F1;
+      color: #2C2A29;
+      line-height: 1.7;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOKENS ── */
+    :root {
+      --bg-1: #FAF5F1;
+      --bg-2: #F4E9E5;
+      --bg-3: #FFFFFF;
+      --card: #FFFFFF;
+      --rose: #CFA1A0;
+      --rose-dark: #B9847F;
+      --rose-light: #E2BEBC;
+      --champagne: #EAC9CB;
+      --champagne-light: #F2DAD8;
+      --rose-gradient: linear-gradient(135deg, #CFA1A0, #E2BEBC, #EAC9CB);
+      --text-dark: #2C2A29;
+      --text-body: #6E635D;
+      --text-muted: #A99E98;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Poppins', sans-serif;
+      --pad: 100px 0;
+      --max: 1140px;
+      --r: 10px;
+      --tr: .45s cubic-bezier(.25,.46,.45,.94);
+    }
+
+    /* ── UTILITIES ── */
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+    .accent-text { color: var(--rose); }
+    section[id] { scroll-margin-top: 84px; }
+
+    .kicker {
+      display: inline-block;
+      font-family: var(--sans); font-size: .72rem; font-weight: 500;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 18px;
+    }
+    .kicker::before {
+      content: ''; display: inline-block; width: 26px; height: 1px;
+      background: var(--rose); vertical-align: middle; margin-right: 12px; opacity: .6;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 12px;
+      letter-spacing: .01em;
+      color: var(--text-dark);
+    }
+    .section-title.accent-text { color: var(--rose); }
+    .section-sub {
+      text-align: center; max-width: 540px; margin: 0 auto;
+      color: var(--text-body); font-size: .95rem; font-weight: 300;
+    }
+
+    .accent-line {
+      width: 54px; height: 2px;
+      background: var(--rose-gradient);
+      margin: 16px auto 18px;
+      border: none;
+    }
+    .accent-line.tight { margin-bottom: 46px; }
+
+    /* ── IMAGE FRAME (com fallback elegante) ── */
+    .img-frame {
+      position: relative; overflow: hidden;
+      background: #EDE3DD; border: 1px solid #E2D6CF;
+      flex-shrink: 0;
+    }
+    .img-frame::after {
+      content: attr(data-label);
+      position: absolute; inset: 0; z-index: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #A89B95; font-size: .72rem; font-family: var(--sans);
+      font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+      text-align: center; padding: 16px;
+    }
+    .img-frame img {
+      position: relative; z-index: 1;
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .img-frame img.img-err { display: none; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 15px 34px;
+      background: var(--rose);
+      color: #fff; font-family: var(--sans); font-size: .82rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+      border: none; border-radius: 6px; cursor: pointer;
+      position: relative; overflow: hidden;
+      transition: var(--tr);
+      box-shadow: 0 4px 24px rgba(207,161,160,.3);
+    }
+    .btn::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+      transform: translateX(-100%); transition: transform .6s;
+    }
+    .btn:hover::before { transform: translateX(100%); }
+    .btn:hover { transform: translateY(-2px); background: var(--rose-dark); box-shadow: 0 8px 32px rgba(207,161,160,.4); }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 15px 30px;
+      background: transparent; color: var(--rose);
+      font-family: var(--sans); font-size: .82rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+      border: 1.5px solid rgba(207,161,160,.5); border-radius: 6px; cursor: pointer;
+      transition: var(--tr);
+    }
+    .btn-ghost:hover { background: rgba(207,161,160,.08); border-color: var(--rose); transform: translateY(-2px); }
+
+    /* ── FADE ANIMATIONS ── */
+    .fi { opacity: 0; transform: translateY(35px); transition: opacity .75s ease, transform .75s ease; }
+    .fi-l { opacity: 0; transform: translateX(-35px); transition: opacity .75s ease, transform .75s ease; }
+    .fi-r { opacity: 0; transform: translateX(35px); transition: opacity .75s ease, transform .75s ease; }
+    .fi.v, .fi-l.v, .fi-r.v { opacity: 1; transform: translate(0); }
+    .stagger > * { opacity: 0; transform: translateY(25px); transition: opacity .55s ease, transform .55s ease; }
+    .stagger.v > *:nth-child(1) { transition-delay: 0s;    opacity: 1; transform: translateY(0); }
+    .stagger.v > *:nth-child(2) { transition-delay: .12s;  opacity: 1; transform: translateY(0); }
+    .stagger.v > *:nth-child(3) { transition-delay: .24s;  opacity: 1; transform: translateY(0); }
+    .stagger.v > *:nth-child(4) { transition-delay: .36s;  opacity: 1; transform: translateY(0); }
+    .stagger.v > *:nth-child(5) { transition-delay: .48s;  opacity: 1; transform: translateY(0); }
+    .stagger.v > *:nth-child(6) { transition-delay: .6s;   opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .fi, .fi-l, .fi-r, .stagger > * { transition: none !important; opacity: 1 !important; transform: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ═══════════════════════════════════════════════
+       NAVBAR
+       ═══════════════════════════════════════════════ */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      transition: var(--tr);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; padding-bottom: 20px; transition: var(--tr); }
+    .nav.scrolled { background: rgba(250,245,241,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,.05); }
+    .nav.scrolled .nav-inner { padding-top: 13px; padding-bottom: 13px; }
+
+    .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .nav-mono { font-family: var(--serif); font-size: 1.55rem; font-weight: 600; color: var(--rose); letter-spacing: .08em; line-height: 1; }
+    .nav-name { font-family: var(--sans); font-size: .66rem; letter-spacing: .26em; text-transform: uppercase; color: var(--text-dark); font-weight: 500; }
+
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      font-family: var(--sans); font-size: .82rem; letter-spacing: .03em;
+      color: var(--text-dark); text-decoration: none; font-weight: 400;
+      transition: color var(--tr); position: relative;
+    }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 0; height: 1.5px; background: var(--rose); transition: width .3s; }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta { padding: 10px 24px; font-size: .72rem; box-shadow: none; }
+    .nav-cta:hover { transform: translateY(-1px); }
+
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      width: 30px; height: 24px; position: relative; z-index: 101;
+    }
+    .nav-toggle span { display: block; position: absolute; left: 0; width: 100%; height: 2px; background: var(--text-dark); border-radius: 2px; transition: var(--tr); }
+    .nav-toggle span:nth-child(1) { top: 2px; }
+    .nav-toggle span:nth-child(2) { top: 11px; }
+    .nav-toggle span:nth-child(3) { top: 20px; }
+    .nav-toggle.open span:nth-child(1) { top: 11px; transform: rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { top: 11px; transform: rotate(-45deg); }
+
+    /* ═══════════════════════════════════════════════
+       1. HERO
+       ═══════════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(180deg, #F6E7E5 0%, #FAF5F1 60%, var(--bg-1) 100%);
+      min-height: 100vh;
+      display: flex; align-items: center;
+      position: relative;
+      padding: 120px 0 60px;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .hero-txt h1 {
+      font-family: var(--serif); font-size: clamp(2.4rem, 5.2vw, 3.7rem);
+      font-weight: 500; line-height: 1.12; margin-bottom: 22px;
+      color: var(--text-dark);
+    }
+    .hero-txt p { color: var(--text-body); font-size: 1.02rem; font-weight: 300; line-height: 1.85; margin-bottom: 34px; max-width: 470px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .hero-img-wrap { position: relative; display: flex; justify-content: center; }
+    .hero-arc {
+      position: absolute; top: -34px; left: 50%; transform: translateX(-50%);
+      width: 360px; height: 180px; pointer-events: none; z-index: 1;
+    }
+    .hero-arc-path { fill: none; stroke: url(#arcGrad); stroke-width: 1.5; }
+    .hero-img {
+      width: 100%; max-width: 410px;
+      aspect-ratio: 3/4; border-radius: var(--r);
+      position: relative; z-index: 2;
+      box-shadow: 0 24px 60px rgba(185,132,127,.22);
+    }
+    .hero-badge {
+      position: absolute; bottom: 22px; left: -18px; z-index: 3;
+      background: #fff; border-radius: 12px; padding: 12px 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.1);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-badge .hb-stars { display: flex; gap: 2px; }
+    .hero-badge .hb-stars svg { width: 13px; height: 13px; }
+    .hero-badge .hb-txt { font-family: var(--sans); font-size: .7rem; color: var(--text-body); font-weight: 400; line-height: 1.3; }
+    .hero-badge .hb-txt b { color: var(--text-dark); font-weight: 600; }
+
+    .hero::after {
+      content: ''; position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%);
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(207,161,160,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════════════
+       2. STATS BAR
+       ═══════════════════════════════════════════════ */
+    .stats {
+      background: var(--bg-2);
+      padding: 46px 0;
+      border-top: 1px solid rgba(207,161,160,.18);
+      border-bottom: 1px solid rgba(207,161,160,.18);
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; text-align: center; }
+    .stat-num {
+      font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 600;
+      color: var(--rose); line-height: 1.2;
+    }
+    .stat-lbl { color: var(--text-body); font-size: .8rem; font-weight: 300; margin-top: 4px; letter-spacing: .03em; }
+
+    /* ═══════════════════════════════════════════════
+       3. TREATMENTS
+       ═══════════════════════════════════════════════ */
+    .treatments { background: var(--bg-1); padding: var(--pad); }
+    .treat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; max-width: 720px; margin: 0 auto; }
+    .treat-card {
+      background: var(--card); border-radius: var(--r); overflow: hidden;
+      border: 1px solid rgba(0,0,0,.06);
+      transition: var(--tr); padding: 34px 24px 30px; text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,.04);
+    }
+    .treat-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(207,161,160,.3);
+      box-shadow: 0 16px 48px rgba(0,0,0,.08);
+    }
+    .treat-icon {
+      width: 64px; height: 64px; margin: 0 auto 20px;
+      border-radius: 50%; background: rgba(207,161,160,.12);
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--tr);
+    }
+    .treat-card:hover .treat-icon { background: rgba(207,161,160,.2); }
+    .treat-icon svg { width: 30px; height: 30px; stroke: var(--rose); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .treat-card h3 {
+      font-family: var(--serif); font-size: 1.32rem; font-weight: 600; margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+    .treat-card p { color: var(--text-body); font-size: .86rem; font-weight: 300; line-height: 1.7; }
+
+    /* ═══════════════════════════════════════════════
+       4. ABOUT
+       ═══════════════════════════════════════════════ */
+    .about { background: var(--bg-2); padding: var(--pad); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+
+    .about-collage { position: relative; width: 100%; max-width: 420px; margin: 0 auto; }
+    .about-main { width: 78%; aspect-ratio: 4/5; border-radius: 200px 200px 16px 16px; }
+    .about-main::before {
+      content: ''; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
+      border-radius: 210px 210px 24px 24px; border: 1.5px solid rgba(207,161,160,.4); pointer-events: none; z-index: 2;
+    }
+    .about-sub {
+      position: absolute; right: 0; bottom: -28px; width: 46%; aspect-ratio: 3/4;
+      border-radius: 14px; border: 5px solid var(--bg-2);
+      box-shadow: 0 16px 40px rgba(0,0,0,.12); z-index: 3;
+    }
+
+    .about-text h2 {
+      font-family: var(--serif); font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 500; margin-bottom: 22px; line-height: 1.2; color: var(--text-dark);
+    }
+    .about-text p { color: var(--text-body); font-size: .95rem; font-weight: 300; line-height: 1.9; margin-bottom: 18px; }
+    .about-sign {
+      font-family: var(--serif); font-style: italic; font-size: 1.5rem;
+      color: var(--rose); margin: 8px 0 30px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       5. WHY CHOOSE
+       ═══════════════════════════════════════════════ */
+    .why { background: var(--bg-1); padding: var(--pad); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .why-text h2 {
+      font-family: var(--serif); font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 500; margin-bottom: 28px; line-height: 1.2; color: var(--text-dark);
+    }
+    .why-list { list-style: none; margin-bottom: 36px; }
+    .why-list li {
+      display: flex; align-items: flex-start; gap: 13px;
+      margin-bottom: 18px; color: var(--text-body);
+      font-size: .95rem; font-weight: 300; line-height: 1.6;
+    }
+    .chk {
+      flex-shrink: 0; width: 24px; height: 24px;
+      border-radius: 50%; background: rgba(207,161,160,.16);
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .chk svg { width: 13px; height: 13px; }
+    .why-img { width: 100%; aspect-ratio: 4/5; border-radius: var(--r); box-shadow: 0 18px 44px rgba(0,0,0,.1); }
+
+    /* ═══════════════════════════════════════════════
+       6. TESTIMONIALS
+       ═══════════════════════════════════════════════ */
+    .testi { background: var(--bg-2); padding: var(--pad); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .testi-card {
+      background: var(--card); padding: 34px 26px;
+      border-radius: var(--r); border: 1px solid rgba(0,0,0,.06);
+      text-align: center; transition: var(--tr);
+      box-shadow: 0 2px 16px rgba(0,0,0,.04);
+    }
+    .testi-card:hover { border-color: rgba(207,161,160,.3); transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,.07); }
+    .testi-avatar {
+      width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 16px;
+      background: var(--rose-gradient); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+    }
+    .testi-stars { display: flex; justify-content: center; gap: 3px; margin-bottom: 16px; }
+    .testi-stars svg { width: 16px; height: 16px; }
+    .testi-quote { color: var(--text-body); font-size: .9rem; font-style: italic; font-weight: 300; line-height: 1.75; margin-bottom: 16px; }
+    .testi-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--text-dark); }
+    .testi-svc { font-size: .72rem; color: var(--rose); letter-spacing: .06em; text-transform: uppercase; margin-top: 3px; }
+
+    /* ═══════════════════════════════════════════════
+       7. INSTAGRAM CTA
+       ═══════════════════════════════════════════════ */
+    .insta { background: var(--bg-1); padding: var(--pad); }
+    .insta-card {
+      background: var(--rose-gradient);
+      border-radius: 20px; padding: 64px 40px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .insta-card::before {
+      content: ''; position: absolute; top: -40%; right: -10%;
+      width: 360px; height: 360px; border-radius: 50%;
+      background: rgba(255,255,255,.12);
+    }
+    .insta-card h2 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 500; color: #fff; margin-bottom: 14px; position: relative; }
+    .insta-card p { color: rgba(255,255,255,.92); font-size: .98rem; font-weight: 300; max-width: 460px; margin: 0 auto 30px; position: relative; }
+    .insta-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #fff; color: var(--rose-dark);
+      font-family: var(--sans); font-size: .85rem; font-weight: 600;
+      letter-spacing: .06em; padding: 14px 30px; border-radius: 40px;
+      text-decoration: none; transition: var(--tr); position: relative;
+      box-shadow: 0 8px 28px rgba(0,0,0,.12);
+    }
+    .insta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,.18); }
+    .insta-btn svg { width: 20px; height: 20px; }
+
+    /* ═══════════════════════════════════════════════
+       8. BOOKING
+       ═══════════════════════════════════════════════ */
+    .booking { background: var(--bg-2); padding: var(--pad); }
+    .book-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+
+    .book-info h3 { font-family: var(--serif); font-size: 1.55rem; font-weight: 600; margin-bottom: 22px; color: var(--text-dark); }
+    .info-row {
+      display: flex; align-items: flex-start; gap: 13px;
+      margin-bottom: 16px; color: var(--text-body); font-size: .9rem; font-weight: 300;
+    }
+    .info-row svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; }
+    .space-img { width: 100%; aspect-ratio: 16/11; border-radius: var(--r); margin-top: 24px; box-shadow: 0 12px 36px rgba(0,0,0,.08); }
+
+    .book-form {
+      background: var(--bg-3); padding: 36px 32px;
+      border-radius: var(--r); border: 1px solid rgba(0,0,0,.06);
+      box-shadow: 0 4px 24px rgba(0,0,0,.05);
+    }
+    .book-form h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; margin-bottom: 6px; text-align: center; color: var(--text-dark); }
+    .book-form .form-hint { text-align: center; font-size: .82rem; color: var(--text-muted); font-weight: 300; margin-bottom: 24px; }
+    .fg { margin-bottom: 18px; }
+    .fg label {
+      display: block; font-size: .75rem; font-weight: 500;
+      letter-spacing: .06em; text-transform: uppercase; color: var(--text-body); margin-bottom: 7px;
+    }
+    .fg input, .fg select, .fg textarea {
+      width: 100%; padding: 13px 14px;
+      background: #FAF6F2; border: 1px solid rgba(0,0,0,.1);
+      border-radius: 6px; color: var(--text-dark);
+      font-family: var(--sans); font-size: .87rem; font-weight: 300;
+      transition: border-color var(--tr), box-shadow var(--tr); outline: none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(207,161,160,.15); }
+    .fg select {
+      appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236E635D' d='M6 8.825L0.375 3.2h11.25L6 8.825z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+    }
+    .fg select option { background: #fff; color: var(--text-dark); }
+    .fg textarea { resize: vertical; min-height: 72px; }
+    .fg input[type="date"] { color-scheme: light; }
+
+    .form-btns { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+    .btn-full { width: 100%; padding: 16px; }
+
+    .btn-wa {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 14px;
+      background: transparent; border: 1px solid rgba(207,161,160,.45);
+      color: var(--rose); font-family: var(--sans); font-size: .8rem;
+      font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
+      text-decoration: none; border-radius: 6px; cursor: pointer; transition: var(--tr);
+    }
+    .btn-wa:hover { background: rgba(207,161,160,.08); border-color: var(--rose); }
+    .btn-wa svg { width: 18px; height: 18px; }
+
+    /* ═══════════════════════════════════════════════
+       9. FOOTER
+       ═══════════════════════════════════════════════ */
+    .footer { background: var(--bg-2); padding: 56px 0 28px; text-align: center; border-top: 1px solid rgba(0,0,0,.06); }
+    .footer .monogram { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--rose); letter-spacing: .12em; margin-bottom: 10px; }
+    .footer-brand {
+      font-family: var(--sans); font-size: .8rem; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--text-body); font-weight: 300; margin-bottom: 22px;
+    }
+    .footer-social { display: flex; justify-content: center; gap: 14px; margin-bottom: 18px; }
+    .footer-social a {
+      display: flex; align-items: center; gap: 7px;
+      color: var(--text-body); text-decoration: none; font-size: .82rem;
+      font-weight: 400; transition: color var(--tr);
+    }
+    .footer-social a:hover { color: var(--rose); }
+    .footer-social a svg { width: 18px; height: 18px; }
+    .footer-city { color: var(--text-body); font-size: .78rem; font-weight: 300; margin-bottom: 18px; }
+    .footer-copy { color: rgba(44,42,41,.4); font-size: .7rem; font-weight: 300; }
+
+    /* ── FLOATING WHATSAPP ── */
+    .wa-float {
+      position: fixed; right: 22px; bottom: 22px; z-index: 90;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 28px rgba(37,211,102,.45);
+      transition: var(--tr); animation: waPulse 2.6s infinite;
+    }
+    .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+    .wa-float:hover { transform: scale(1.08); }
+    @keyframes waPulse { 0%,100% { box-shadow: 0 8px 28px rgba(37,211,102,.45); } 50% { box-shadow: 0 8px 28px rgba(37,211,102,.45), 0 0 0 10px rgba(37,211,102,.12); } }
+
+    /* ═══════════════════════════════════════════════
+       SERVIÇOS — DETALHE (acordeão)
+       ═══════════════════════════════════════════════ */
+    .svc-detail { background: var(--bg-1); padding: var(--pad); }
+    .svc-acc { max-width: 780px; margin: 0 auto; }
+    .svc-item {
+      background: #fff; border: 1px solid rgba(0,0,0,.07); border-radius: 14px;
+      margin-bottom: 14px; overflow: hidden; transition: var(--tr);
+      box-shadow: 0 2px 14px rgba(0,0,0,.03);
+    }
+    .svc-item.open { border-color: rgba(207,161,160,.45); box-shadow: 0 12px 34px rgba(0,0,0,.07); }
+    .svc-head { display: flex; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer; user-select: none; }
+    .svc-ic { width: 48px; height: 48px; border-radius: 50%; background: rgba(207,161,160,.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: var(--tr); }
+    .svc-item.open .svc-ic { background: rgba(207,161,160,.22); }
+    .svc-ic svg { width: 23px; height: 23px; stroke: var(--rose); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .svc-head h3 { font-family: var(--serif); font-size: 1.22rem; font-weight: 600; color: var(--text-dark); flex: 1; }
+    .svc-plus { width: 22px; height: 22px; position: relative; flex-shrink: 0; }
+    .svc-plus::before, .svc-plus::after { content: ''; position: absolute; background: var(--rose); border-radius: 2px; }
+    .svc-plus::before { top: 10px; left: 1px; right: 1px; height: 2px; }
+    .svc-plus::after { left: 10px; top: 1px; bottom: 1px; width: 2px; transition: var(--tr); }
+    .svc-item.open .svc-plus::after { transform: scaleY(0); }
+    .svc-body { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.25,.46,.45,.94); }
+    .svc-body-inner { padding: 0 24px 24px 88px; color: var(--text-body); font-size: .92rem; font-weight: 300; line-height: 1.85; }
+    .svc-body-inner .svc-tag { display: inline-block; margin-top: 12px; font-size: .72rem; letter-spacing: .04em; color: var(--rose); font-weight: 500; }
+
+    /* ═══════════════════════════════════════════════
+       DEPOIMENTOS — CARROSSEL
+       ═══════════════════════════════════════════════ */
+    .testi-carousel-wrap { margin-top: 50px; position: relative; }
+    .testi-carousel {
+      display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 6px 4px 18px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+    }
+    .testi-carousel::-webkit-scrollbar { height: 6px; }
+    .testi-carousel::-webkit-scrollbar-track { background: transparent; }
+    .testi-carousel::-webkit-scrollbar-thumb { background: rgba(207,161,160,.4); border-radius: 3px; }
+    .depo-card {
+      flex: 0 0 auto; width: 248px; aspect-ratio: 9 / 16; scroll-snap-align: center;
+      border-radius: 16px; overflow: hidden; cursor: pointer; position: relative;
+      border: 1px solid rgba(0,0,0,.06); box-shadow: 0 6px 20px rgba(0,0,0,.08);
+      transition: var(--tr); background: #EDE3DD;
+    }
+    .depo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .depo-card:hover { transform: translateY(-5px); box-shadow: 0 16px 38px rgba(0,0,0,.16); }
+    .depo-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.25), transparent 38%); pointer-events: none; }
+    .depo-play {
+      position: absolute; bottom: 12px; left: 12px; z-index: 2;
+      display: flex; align-items: center; gap: 6px; color: #fff;
+      font-family: var(--sans); font-size: .72rem; font-weight: 500;
+      background: rgba(0,0,0,.32); padding: 6px 11px; border-radius: 20px;
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    }
+    .depo-play svg { width: 12px; height: 12px; fill: #fff; }
+    .carousel-nav { display: flex; justify-content: center; gap: 14px; margin-top: 6px; }
+    .carousel-btn {
+      width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(207,161,160,.5);
+      background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--tr);
+    }
+    .carousel-btn:hover { background: var(--rose); border-color: var(--rose); transform: translateY(-2px); }
+    .carousel-btn svg { width: 18px; height: 18px; stroke: var(--rose); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: var(--tr); }
+    .carousel-btn:hover svg { stroke: #fff; }
+    .testi-actions { text-align: center; margin-top: 34px; }
+
+    /* ═══════════════════════════════════════════════
+       STORIES (visualizador estilo Instagram)
+       ═══════════════════════════════════════════════ */
+    .stories-modal {
+      position: fixed; inset: 0; z-index: 200; background: rgba(18,14,13,.94);
+      display: none; align-items: center; justify-content: center; padding: 10px;
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    }
+    .stories-modal.open { display: flex; }
+    .stories-stage { position: relative; width: 100%; max-width: 430px; height: 92vh; max-height: 860px; display: flex; flex-direction: column; }
+    .stories-bars { display: flex; gap: 5px; padding: 4px 4px 0; position: relative; z-index: 3; }
+    .stories-bar { flex: 1; height: 3px; background: rgba(255,255,255,.32); border-radius: 3px; overflow: hidden; }
+    .stories-bar > i { display: block; height: 100%; width: 0; background: #fff; border-radius: 3px; }
+    .stories-bar.done > i { width: 100%; }
+    .stories-bar.active > i { animation: storyFill var(--story-dur, 6s) linear forwards; }
+    @keyframes storyFill { from { width: 0; } to { width: 100%; } }
+    .stories-head { display: flex; align-items: center; gap: 10px; padding: 12px 6px 12px; position: relative; z-index: 3; }
+    .sh-av { width: 36px; height: 36px; border-radius: 50%; background: var(--rose-gradient); display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--serif); font-weight: 600; font-size: .95rem; }
+    .sh-name { color: #fff; font-size: .84rem; font-weight: 500; line-height: 1.2; }
+    .sh-name small { display: block; color: rgba(255,255,255,.6); font-size: .7rem; font-weight: 300; }
+    .stories-close { margin-left: auto; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; line-height: 1; padding: 0 8px; }
+    .stories-imgwrap { flex: 1; position: relative; overflow: hidden; border-radius: 14px; background: #000; display: flex; align-items: center; justify-content: center; }
+    .stories-imgwrap img { width: 100%; height: 100%; object-fit: contain; }
+    .stories-tapzones { position: absolute; inset: 0; display: flex; z-index: 2; }
+    .stories-tapzones > div { flex: 1; cursor: pointer; }
+    .stories-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 5;
+      background: rgba(255,255,255,.16); border: none; width: 42px; height: 42px; border-radius: 50%;
+      color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--tr);
+    }
+    .stories-arrow:hover { background: rgba(255,255,255,.3); }
+    .stories-arrow svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .stories-arrow.prev { left: -56px; }
+    .stories-arrow.next { right: -56px; }
+    @media (max-width: 560px) { .stories-arrow { display: none; } }
+
+    /* ═══════════════════════════════════════════════
+       ANTES & DEPOIS
+       ═══════════════════════════════════════════════ */
+    .ba { background: var(--bg-2); padding: var(--pad); }
+    .ba-carousel-wrap { position: relative; }
+    .ba-carousel {
+      display: flex; align-items: flex-start; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 6px 4px 18px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+      touch-action: pan-x pan-y;
+    }
+    .ba-carousel::-webkit-scrollbar { height: 6px; }
+    .ba-carousel::-webkit-scrollbar-track { background: transparent; }
+    .ba-carousel::-webkit-scrollbar-thumb { background: rgba(207,161,160,.4); border-radius: 3px; }
+    .ba-slide {
+      flex: 0 0 auto; width: clamp(240px, 30vw, 300px); aspect-ratio: 9 / 16; scroll-snap-align: center;
+      border-radius: 16px; overflow: hidden; position: relative; background: #F1E7E2;
+      box-shadow: 0 6px 22px rgba(0,0,0,.12); line-height: 0;
+    }
+    .ba-slide img, .ba-slide video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ba-badge {
+      position: absolute; top: 12px; left: 12px; z-index: 2;
+      background: rgba(255,255,255,.92); color: var(--rose-dark);
+      font-family: var(--sans); font-size: .64rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase; padding: 5px 11px;
+      border-radius: 20px; line-height: 1; box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    }
+
+    /* ── MAPA + CTA agendamento ── */
+    .book-map-col { display: flex; }
+    .book-map { width: 100%; min-height: 420px; border: 0; border-radius: var(--r); box-shadow: 0 12px 36px rgba(0,0,0,.08); }
+    .book-cta { margin-top: 30px; }
+    .book-cta p { color: var(--text-body); font-size: .92rem; font-weight: 300; margin-bottom: 16px; }
+    #sistema-agendamento:empty { display: none; }
+    #sistema-agendamento { margin-bottom: 16px; }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════ */
+    @media (max-width: 968px) {
+      :root { --pad: 80px 0; }
+      .nav-links {
+        position: fixed; top: 0; right: 0; width: 70%; max-width: 300px; height: 100vh;
+        background: var(--bg-1); flex-direction: column; align-items: flex-start;
+        gap: 26px; padding: 100px 36px; box-shadow: -8px 0 40px rgba(0,0,0,.1);
+        transform: translateX(100%); visibility: hidden;
+        transition: transform .4s cubic-bezier(.25,.46,.45,.94), visibility .4s;
+      }
+      .nav-links.open { transform: translateX(0); visibility: visible; }
+      .nav-links a { font-size: 1rem; }
+      .nav-cta { display: none; }
+      .nav-toggle { display: block; }
+
+      .treat-grid { grid-template-columns: repeat(2,1fr); }
+
+      /* HERO MOBILE: rosto primeiro → headline → botões */
+      .hero { min-height: auto; padding: 96px 0 52px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 26px; text-align: center; }
+      .hero-txt { order: 2; display: flex; flex-direction: column; }
+      .hero-img-wrap { order: 1; }
+      .hero-txt .kicker { order: 1; margin-bottom: 14px; }
+      .hero-txt h1 { order: 2; margin-bottom: 20px; }
+      .hero-txt .hero-ctas { order: 3; }
+      .hero-txt p { order: 4; margin: 22px auto 0; }
+      .hero-img { max-width: 300px; }
+      .hero-ctas { justify-content: center; }
+      .kicker { display: inline-block; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 60px; }
+      .about-collage { order: -1; max-width: 360px; margin-bottom: 24px; }
+      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+      .why-img { max-width: 400px; margin: 0 auto; order: -1; }
+      .testi-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .book-grid { grid-template-columns: 1fr; gap: 40px; }
+      .book-map-col { order: -1; }
+      .book-map { min-height: 300px; }
+    }
+    @media (max-width: 600px) {
+      :root { --pad: 60px 0; }
+      .stats-grid { grid-template-columns: 1fr; gap: 28px; }
+      .treat-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+      .book-form { padding: 24px 18px; }
+      .btn, .btn-ghost { padding: 13px 26px; font-size: .78rem; }
+      .hero-arc { width: 280px; height: 140px; top: -22px; }
+      .insta-card { padding: 48px 24px; }
+      .about-sub { width: 50%; }
+      .depo-card { width: 200px; }
+      .ba-slide { width: 72vw; max-width: 300px; }
+      .svc-head { padding: 18px 18px; gap: 13px; }
+      .svc-head h3 { font-size: 1.08rem; }
+      .svc-body-inner { padding: 0 18px 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- hidden SVG defs -->
+  <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+    <defs>
+      <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#CFA1A0"/>
+        <stop offset="50%" stop-color="#E2BEBC"/>
+        <stop offset="100%" stop-color="#EAC9CB"/>
+      </linearGradient>
+      <linearGradient id="chkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#CFA1A0"/>
+        <stop offset="100%" stop-color="#E2BEBC"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+       ═══════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-mono">JR</span>
+        <span class="nav-name">Júlia Roberta</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#tratamentos">Serviços</a>
+        <a href="#antes-depois">Resultados</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#agendamento">Contato</a>
+        <a href="#agendamento" class="btn nav-cta">Agendar</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       1. HERO
+       ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-txt fi-l">
+          <span class="kicker">Lash &amp; Brow Designer · Cerquilho-SP</span>
+          <h1><span class="accent-text">Realce o que já é bonito</span> em você.</h1>
+          <p>Lash Lifting e Brow Lamination que valorizam a sua beleza natural — com técnica, delicadeza e um olhar único para o seu rosto.</p>
+          <div class="hero-ctas">
+            <a href="#agendamento" class="btn">Agendar meu horário</a>
+            <a href="#sobre" class="btn-ghost">Conhecer a Júlia</a>
+          </div>
+        </div>
+        <div class="hero-img-wrap fi-r">
+          <svg class="hero-arc" viewBox="0 0 360 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path class="hero-arc-path" d="M20,170 Q180,0 340,170" />
+            <path class="hero-arc-path" d="M36,170 Q180,16 324,170" style="opacity:.4;" />
+          </svg>
+          <div class="img-frame hero-img" data-label="Foto Júlia Roberta">
+            <img src="assets/img/hero.jpg" alt="Júlia Roberta, especialista em lash lifting e brow lamination" loading="eager" fetchpriority="high" decoding="async" width="410" height="547" onerror="this.classList.add('img-err')" />
+          </div>
+          <div class="hero-badge">
+            <div>
+              <div class="hb-stars">
+                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="hb-txt"><b>5.0</b> · centenas de clientes satisfeitas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       2. STATS
+       ═══════════════════════════════════════════════ -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid stagger">
+        <div>
+          <div class="stat-num">+7 estados</div>
+          <div class="stat-lbl">com alunas formadas pelo Brasil</div>
+        </div>
+        <div>
+          <div class="stat-num">+500</div>
+          <div class="stat-lbl">atendimentos realizados</div>
+        </div>
+        <div>
+          <div class="stat-num">5.0</div>
+          <div class="stat-lbl">na avaliação das clientes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       3. TREATMENTS
+       ═══════════════════════════════════════════════ -->
+  <section class="treatments" id="tratamentos">
+    <div class="container">
+      <h2 class="section-title accent-text fi">Serviços em destaque</h2>
+      <hr class="accent-line tight fi" />
+      <div class="treat-grid stagger">
+        <div class="treat-card">
+          <div class="treat-icon">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Lash Lifting</h3>
+          <p>Curvatura natural e duradoura para os seus cílios, sem extensões. Técnica segura e delicada.</p>
+        </div>
+        <div class="treat-card">
+          <div class="treat-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 21l6-6"/><path d="M9 15l-2-2"/><path d="M14 10l-4 4 2 2 4-4z"/><path d="M14 10l5-5a2.5 2.5 0 013.5 3.5l-5 5z"/></svg>
+          </div>
+          <h3>Brow Lamination</h3>
+          <p>Fios alinhados e preenchidos para um efeito de sobrancelhas mais cheias e definidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       3b. SERVIÇOS — DETALHE
+       ═══════════════════════════════════════════════ -->
+  <section class="svc-detail" id="servicos">
+    <div class="container">
+      <h2 class="section-title accent-text fi">Entenda cada serviço</h2>
+      <hr class="accent-line fi" />
+      <p class="section-sub fi" style="margin-bottom:46px;">Toque em cada serviço para ver os detalhes e descobrir qual é o ideal para você.</p>
+
+      <div class="svc-acc fi">
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <h3>Lash Lifting</h3>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            O efeito de cílios curvados, levantados e alongados usando os seus próprios fios — sem extensões. Entender a química, a estrutura do fio e cada tipo de cílio e pálpebra faz toda a diferença no resultado natural e duradouro. Dura em média de 6 a 8 semanas.
+            <span class="svc-tag">Ideal para quem quer acordar com o olhar pronto, sem maquiagem</span>
+          </div></div>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M3 21l6-6"/><path d="M14 10l-4 4 2 2 4-4z"/><path d="M14 10l5-5a2.5 2.5 0 013.5 3.5l-5 5z"/></svg></span>
+            <h3>Brow Lamination</h3>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            Um alinhamento que disciplina e fixa os fios para cima, criando o efeito de sobrancelhas mais cheias, volumosas e penteadas. Excelente para quem tem fios rebeldes ou deseja um visual moderno e bem definido, mantendo a naturalidade.
+            <span class="svc-tag">Ideal para fios rebeldes ou para um efeito mais volumoso</span>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       4. ABOUT
+       ═══════════════════════════════════════════════ -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap fi-l">
+          <div class="about-collage">
+            <div class="img-frame about-main" data-label="Foto Júlia — palestra">
+              <img src="assets/img/sobre-1.jpg" alt="Júlia Roberta palestrando sobre o universo da beleza" loading="lazy" decoding="async" onerror="this.classList.add('img-err')" />
+            </div>
+            <div class="img-frame about-sub" data-label="Foto Júlia — café">
+              <img src="assets/img/sobre-2.jpg" alt="Júlia Roberta sorrindo no estúdio" loading="lazy" decoding="async" onerror="this.classList.add('img-err')" />
+            </div>
+          </div>
+        </div>
+        <div class="about-text fi-r">
+          <span class="kicker">Quem é a Júlia</span>
+          <h2><span class="accent-text">Beleza não é padrão,</span><br/>é expressão.</h2>
+          <p>Sou a Júlia Roberta, especialista em Lash Lifting e Brow Lamination em Cerquilho-SP. Acredito que cada rosto tem a sua própria beleza — e o meu trabalho é realçar isso com naturalidade e cuidado.</p>
+          <p>Mais do que um procedimento, entrego autoestima e um atendimento que respeita o que você gosta. Hoje também formo profissionais por todo o Brasil, levando técnica e excelência para mais mulheres.</p>
+          <div class="about-sign">Júlia Roberta</div>
+          <a href="#agendamento" class="btn">Quero ser atendida</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       5. WHY CHOOSE
+       ═══════════════════════════════════════════════ -->
+  <section class="why" id="diferenciais">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-text fi-l">
+          <span class="kicker">Por que escolher a Júlia</span>
+          <h2><span class="accent-text">Transforme sua autoestima</span> em uma só visita.</h2>
+          <ul class="why-list">
+            <li>
+              <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="url(#chkGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Resultado natural, feito sob medida para o seu rosto
+            </li>
+            <li>
+              <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="url(#chkGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Ambiente acolhedor, higienizado e exclusivo
+            </li>
+            <li>
+              <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="url(#chkGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Técnica refinada, segura e duradoura
+            </li>
+            <li>
+              <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="url(#chkGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Atendimento personalizado do início ao fim
+            </li>
+          </ul>
+          <a href="#agendamento" class="btn">Agendar meu horário</a>
+        </div>
+        <div class="fi-r">
+          <div class="img-frame why-img" data-label="Foto Júlia — atendimento">
+            <img src="assets/img/atendimento.jpg" alt="Júlia Roberta realizando um atendimento de sobrancelhas" loading="lazy" decoding="async" onerror="this.classList.add('img-err')" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       5b. ANTES & DEPOIS
+       ═══════════════════════════════════════════════ -->
+  <section class="ba" id="antes-depois">
+    <div class="container">
+      <h2 class="section-title accent-text fi">Antes &amp; Depois</h2>
+      <hr class="accent-line fi" />
+      <p class="section-sub fi" style="margin-bottom:46px;">Resultados reais de clientes — veja a transformação no olhar.</p>
+
+      <div class="ba-carousel-wrap fi">
+        <div class="ba-carousel" id="baCarousel">
+          <div class="ba-slide">
+            <span class="ba-badge">Antes &amp; Depois</span>
+            <video class="ba-video" src="assets/videos/ad-1.mp4" muted loop playsinline preload="none" controls></video>
+          </div>
+          <div class="ba-slide">
+            <span class="ba-badge">Antes &amp; Depois</span>
+            <img src="assets/img/antes-depois/ad-1.jpg" alt="Antes e depois de design de sobrancelhas" loading="lazy" decoding="async" />
+          </div>
+          <div class="ba-slide">
+            <span class="ba-badge">Antes &amp; Depois</span>
+            <video class="ba-video" src="assets/videos/ad-2.mp4" muted loop playsinline preload="none" controls></video>
+          </div>
+          <div class="ba-slide">
+            <span class="ba-badge">Antes &amp; Depois</span>
+            <img src="assets/img/antes-depois/ad-2.jpg" alt="Antes e depois de sobrancelhas" loading="lazy" decoding="async" />
+          </div>
+          <div class="ba-slide">
+            <span class="ba-badge">Antes &amp; Depois</span>
+            <video class="ba-video" src="assets/videos/ad-3.mp4" muted loop playsinline preload="none" controls></video>
+          </div>
+          <div class="ba-slide">
+            <span class="ba-badge">Antes &amp; Depois</span>
+            <img src="assets/img/antes-depois/ad-3.jpg" alt="Antes e depois de lash lifting" loading="lazy" decoding="async" />
+          </div>
+          <div class="ba-slide">
+            <span class="ba-badge">Antes &amp; Depois</span>
+            <video class="ba-video" src="assets/videos/ad-4.mp4" muted loop playsinline preload="none" controls></video>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="baPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn" id="baNext" aria-label="Próximo">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       6. TESTIMONIALS
+       ═══════════════════════════════════════════════ -->
+  <section class="testi" id="depoimentos">
+    <div class="container">
+      <h2 class="section-title accent-text fi">Veja o que dizem sobre mim</h2>
+      <hr class="accent-line fi" />
+      <p class="section-sub fi" style="margin-bottom:10px;">Mensagens reais de clientes que saíram daqui se sentindo mais bonitas 💕</p>
+
+      <!-- carrossel dos prints de depoimentos -->
+      <div class="testi-carousel-wrap fi">
+        <div class="testi-carousel" id="depoCarousel" role="list"></div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="depoPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn" id="depoNext" aria-label="Próximo">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="testi-actions">
+          <button class="btn" id="openStories" type="button">▶ Ver em formato Stories</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       7. INSTAGRAM CTA
+       ═══════════════════════════════════════════════ -->
+  <section class="insta" id="galeria">
+    <div class="container">
+      <div class="insta-card fi">
+        <h2>Acompanhe os bastidores</h2>
+        <p>Resultados reais, dicas e novidades todos os dias. Venha fazer parte do nosso dia a dia no Instagram.</p>
+        <a href="https://instagram.com/juliarobertastudio" target="_blank" rel="noopener noreferrer" class="insta-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @juliarobertastudio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       8. BOOKING
+       ═══════════════════════════════════════════════ -->
+  <section class="booking" id="agendamento">
+    <div class="container">
+      <h2 class="section-title accent-text fi">Pronta para se transformar?</h2>
+      <hr class="accent-line tight fi" />
+
+      <div class="book-grid">
+        <div class="book-info fi-l">
+          <h3>Nosso espaço</h3>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#CFA1A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a href="https://maps.google.com/?q=Rua+Professor+Antônio+Carlos+de+Castro,+80,+Cerquilho+SP" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">Rua Professor Antônio Carlos de Castro, 80 — Cerquilho/SP</a>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#CFA1A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Atendimento com hora marcada · das 9h às 18h</span>
+          </div>
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#CFA1A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+5515997138691" style="color:inherit;text-decoration:none;">+55 15 99713-8691</a>
+          </div>
+
+          <div class="book-cta">
+            <p>Escolha o melhor dia e horário para o seu atendimento:</p>
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 SISTEMA DE AGENDAMENTO
+                 Cole aqui o embed/iframe/script do seu sistema interno.
+                 Ex.: <iframe src="https://seu-sistema.com/agenda" ...></iframe>
+                 É só substituir o conteúdo da div abaixo.
+                 ═══════════════════════════════════════════════════════════ -->
+            <div id="sistema-agendamento"></div>
+
+            <a href="https://wa.me/5515997138691?text=Ol%C3%A1%2C%20J%C3%BAlia!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20%F0%9F%8C%9F" target="_blank" rel="noopener noreferrer" class="btn btn-full">Agendar pelo WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="book-map-col fi-r">
+          <iframe
+            class="book-map"
+            title="Localização do estúdio da Júlia Roberta em Cerquilho-SP"
+            src="https://maps.google.com/maps?q=Rua%20Professor%20Ant%C3%B4nio%20Carlos%20de%20Castro%2C%2080%2C%20Cerquilho%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       9. FOOTER
+       ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="monogram">JR</div>
+      <div class="footer-brand">Júlia Roberta — Lash Lifting &amp; Brow Lamination</div>
+      <div class="footer-social">
+        <a href="https://instagram.com/juliarobertastudio" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @juliarobertastudio
+        </a>
+      </div>
+      <div class="footer-city">Cerquilho — SP</div>
+      <div class="footer-copy">&copy; 2026 Júlia Roberta. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       STORIES MODAL
+       ═══════════════════════════════════════════════ -->
+  <div class="stories-modal" id="storiesModal" aria-hidden="true">
+    <button class="stories-arrow prev" id="storyPrev" aria-label="Anterior"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <div class="stories-stage">
+      <div class="stories-bars" id="storyBars"></div>
+      <div class="stories-head">
+        <span class="sh-av">JR</span>
+        <span class="sh-name">juliarobertastudio<small>depoimentos reais</small></span>
+        <button class="stories-close" id="storyClose" aria-label="Fechar">&times;</button>
+      </div>
+      <div class="stories-imgwrap">
+        <img id="storyImg" src="" alt="Depoimento de cliente" />
+        <div class="stories-tapzones">
+          <div id="storyTapPrev"></div>
+          <div id="storyTapNext"></div>
+        </div>
+      </div>
+    </div>
+    <button class="stories-arrow next" id="storyNext" aria-label="Próximo"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+
+  <!-- floating whatsapp -->
+  <a href="#" class="wa-float" id="waFloat" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ═══════════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════════ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const WA = '5515997138691'; // WhatsApp da Júlia
+
+      /* ── intersection observer (animações) ── */
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('v'); obs.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -50px 0px', threshold: 0.12 });
+      document.querySelectorAll('.fi,.fi-l,.fi-r,.stagger').forEach(el => obs.observe(el));
+
+      /* ── navbar scroll + mobile toggle ── */
+      const nav = document.getElementById('nav');
+      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+      onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      const closeMenu = () => { toggle.classList.remove('open'); links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); };
+      toggle.addEventListener('click', () => {
+        const open = toggle.classList.toggle('open');
+        links.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+      /* ── phone mask ── */
+      const ph = document.getElementById('phone');
+      if (ph) ph.addEventListener('input', e => {
+        let v = e.target.value.replace(/\D/g, '');
+        if (v.length > 11) v = v.slice(0, 11);
+        if (v.length > 6) v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+        else if (v.length > 2) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+        else if (v.length > 0) v = `(${v}`;
+        e.target.value = v;
+      });
+
+      /* ── date min (hoje) ── */
+      const dt = document.getElementById('date');
+      if (dt) dt.setAttribute('min', new Date().toISOString().split('T')[0]);
+
+      /* ── WhatsApp ── */
+      function waMsg() {
+        const n = document.getElementById('name').value.trim();
+        const p = document.getElementById('phone').value.trim();
+        const s = document.getElementById('service').value;
+        const d = document.getElementById('date').value;
+        const o = document.getElementById('notes').value.trim();
+        let fd = ''; if (d) { const [y,m,dy] = d.split('-'); fd = `${dy}/${m}/${y}`; }
+        let msg = `Olá, Júlia! 🌟\n\nGostaria de agendar um horário.\n`;
+        if (n) msg += `\n*Nome:* ${n}`;
+        if (p) msg += `\n*Telefone:* ${p}`;
+        if (s) msg += `\n*Serviço:* ${s}`;
+        if (fd) msg += `\n*Data preferida:* ${fd}`;
+        if (o) msg += `\n*Observações:* ${o}`;
+        msg += `\n\nAguardo retorno! 💛`;
+        return encodeURIComponent(msg);
+      }
+      const openWA = (withForm) => window.open(`https://wa.me/${WA}?text=${withForm ? waMsg() : encodeURIComponent('Olá, Júlia! Gostaria de agendar um horário 🌟')}`, '_blank');
+
+      const form = document.getElementById('bookingForm');
+      if (form) form.addEventListener('submit', e => {
+        e.preventDefault();
+        const required = ['name','phone','service','date'];
+        let ok = true;
+        required.forEach(id => {
+          const f = document.getElementById(id);
+          if (!f.value || !f.value.trim()) {
+            ok = false;
+            f.style.borderColor = '#CFA1A0';
+            f.style.boxShadow = '0 0 0 3px rgba(207,161,160,.2)';
+            setTimeout(() => { f.style.borderColor = ''; f.style.boxShadow = ''; }, 2200);
+          }
+        });
+        if (!ok) return;
+        openWA(true);
+      });
+
+      const waBtn = document.getElementById('whatsappDirect');
+      if (waBtn) waBtn.addEventListener('click', e => { e.preventDefault(); openWA(true); });
+      const waFloat = document.getElementById('waFloat');
+      if (waFloat) waFloat.addEventListener('click', e => { e.preventDefault(); openWA(false); });
+
+      /* ── smooth scroll ── */
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const t = document.querySelector(href);
+          if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+      });
+
+      /* ── acordeão de serviços ── */
+      document.querySelectorAll('.svc-item').forEach(item => {
+        const head = item.querySelector('.svc-head');
+        const body = item.querySelector('.svc-body');
+        head.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.svc-item.open').forEach(o => {
+            o.classList.remove('open');
+            o.querySelector('.svc-body').style.maxHeight = null;
+          });
+          if (!isOpen) { item.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+        });
+      });
+
+      /* ── depoimentos: carrossel + stories ── */
+      const DEPO_COUNT = 13;
+      const depoSrc = i => `assets/img/depoimentos/depo-${i + 1}.jpg`;
+      const carousel = document.getElementById('depoCarousel');
+      if (carousel) {
+        for (let i = 0; i < DEPO_COUNT; i++) {
+          const card = document.createElement('div');
+          card.className = 'depo-card';
+          card.setAttribute('role', 'listitem');
+          card.innerHTML = `<img src="${depoSrc(i)}" alt="Depoimento de cliente ${i + 1}" loading="lazy" decoding="async">`
+            + `<span class="depo-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>ver story</span>`;
+          card.addEventListener('click', () => openStories(i));
+          carousel.appendChild(card);
+        }
+        const step = () => Math.min(carousel.clientWidth * 0.8, 286);
+        document.getElementById('depoPrev').addEventListener('click', () => carousel.scrollBy({ left: -step(), behavior: 'smooth' }));
+        document.getElementById('depoNext').addEventListener('click', () => carousel.scrollBy({ left: step(), behavior: 'smooth' }));
+      }
+
+      /* stories engine */
+      const modal = document.getElementById('storiesModal');
+      const storyImg = document.getElementById('storyImg');
+      const barsWrap = document.getElementById('storyBars');
+      const STORY_DUR = 6000;
+      let storyIdx = 0, storyTimer = null;
+
+      function buildBars() {
+        barsWrap.innerHTML = '';
+        for (let i = 0; i < DEPO_COUNT; i++) {
+          const b = document.createElement('div');
+          b.className = 'stories-bar';
+          b.innerHTML = '<i></i>';
+          barsWrap.appendChild(b);
+        }
+      }
+      function renderStory(i) {
+        storyIdx = (i + DEPO_COUNT) % DEPO_COUNT;
+        storyImg.src = depoSrc(storyIdx);
+        const bars = barsWrap.children;
+        for (let k = 0; k < bars.length; k++) {
+          bars[k].classList.remove('active', 'done');
+          if (k < storyIdx) bars[k].classList.add('done');
+        }
+        const cur = bars[storyIdx];
+        void cur.offsetWidth; /* reinicia a animação */
+        cur.style.setProperty('--story-dur', STORY_DUR + 'ms');
+        cur.classList.add('active');
+        clearTimeout(storyTimer);
+        storyTimer = setTimeout(nextStory, STORY_DUR);
+      }
+      function nextStory() { if (storyIdx >= DEPO_COUNT - 1) closeStories(); else renderStory(storyIdx + 1); }
+      function prevStory() { renderStory(storyIdx - 1); }
+      function openStories(i) {
+        if (!modal) return;
+        buildBars();
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        renderStory(i || 0);
+      }
+      function closeStories() {
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        clearTimeout(storyTimer);
+      }
+
+      const openBtn = document.getElementById('openStories');
+      if (openBtn) openBtn.addEventListener('click', () => openStories(0));
+      const bind = (id, fn) => { const el = document.getElementById(id); if (el) el.addEventListener('click', fn); };
+      bind('storyClose', closeStories);
+      bind('storyNext', nextStory);
+      bind('storyPrev', prevStory);
+      bind('storyTapNext', nextStory);
+      bind('storyTapPrev', prevStory);
+      if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeStories(); });
+      document.addEventListener('keydown', e => {
+        if (!modal || !modal.classList.contains('open')) return;
+        if (e.key === 'Escape') closeStories();
+        else if (e.key === 'ArrowRight') nextStory();
+        else if (e.key === 'ArrowLeft') prevStory();
+      });
+
+      /* ── carrossel antes/depois: setas ── */
+      const baCar = document.getElementById('baCarousel');
+      if (baCar) {
+        const baStep = () => baCar.clientWidth * 0.85;
+        document.getElementById('baPrev').addEventListener('click', () => baCar.scrollBy({ left: -baStep(), behavior: 'smooth' }));
+        document.getElementById('baNext').addEventListener('click', () => baCar.scrollBy({ left: baStep(), behavior: 'smooth' }));
+      }
+
+      /* ── vídeos antes/depois: play quando visível, pausa quando sai ── */
+      const baVideos = document.querySelectorAll('.ba-video');
+      if (baVideos.length) {
+        const vObs = new IntersectionObserver(entries => {
+          entries.forEach(en => {
+            const v = en.target;
+            if (en.isIntersecting) v.play().catch(() => {});
+            else v.pause();
+          });
+        }, { threshold: 0.5 });
+        baVideos.forEach(v => vObs.observe(v));
+      }
+    });
+  </script>
+
+</body>
+</html>

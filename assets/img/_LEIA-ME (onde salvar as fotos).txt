@@ -1,0 +1,29 @@
+COMO ADICIONAR AS FOTOS DA JÚLIA
+=================================
+
+Salve cada foto NESTA pasta (assets/img/) EXATAMENTE com o nome indicado
+abaixo. Use .jpg. Assim que salvar, o site mostra a foto automaticamente
+(é só atualizar a página no navegador).
+
+1) hero.jpg
+   -> Foto editorial das várias mãos com luvas segurando os instrumentos
+      ao redor do rosto. (a mais "impactante" — fica no topo do site)
+
+2) sobre-1.jpg
+   -> Foto da Júlia segurando o microfone (palestra / autoridade).
+      É a foto principal da seção "Sobre".
+
+3) sobre-2.jpg
+   -> Foto da Júlia sorrindo segurando a xícara de café.
+      Aparece sobreposta, menor, ao lado da sobre-1.
+
+4) atendimento.jpg
+   -> Foto da Júlia com máscara e luvas pretas fazendo o atendimento
+      na cliente. Fica na seção "Por que escolher a Júlia".
+
+5) espaco.jpg
+   -> Foto da Júlia segurando a plaquinha do logo no espelho do estúdio.
+      Aparece na seção de agendamento ("Nosso espaço").
+
+DICA: fotos na vertical (retrato) ficam melhores. O site recorta
+automaticamente (object-fit: cover), então não precisa editar.
