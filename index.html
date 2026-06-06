@@ -627,6 +627,28 @@
     #sistema-agendamento:empty { display: none; }
     #sistema-agendamento { margin-bottom: 16px; }
 
+    /* ── MODAL DE AGENDAMENTO (Lume) ── */
+    .lume-modal { position: fixed; inset: 0; z-index: 200; display: none; }
+    .lume-modal.open { display: block; }
+    .lume-backdrop { position: absolute; inset: 0; background: rgba(44,42,41,.55); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); animation: lumeFade .25s ease; }
+    .lume-dialog {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: min(460px, 94vw); height: min(86vh, 820px);
+      background: #fff; border-radius: 18px; overflow: hidden;
+      box-shadow: 0 30px 90px rgba(0,0,0,.4); animation: lumePop .3s cubic-bezier(.25,.46,.45,.94);
+    }
+    .lume-dialog iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .lume-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: .85rem; font-family: var(--sans); }
+    .lume-close {
+      position: absolute; top: 10px; right: 12px; z-index: 3;
+      width: 36px; height: 36px; border: none; border-radius: 50%;
+      background: rgba(255,255,255,.92); color: #2C2A29; font-size: 1.5rem; line-height: 1;
+      cursor: pointer; box-shadow: 0 2px 12px rgba(0,0,0,.18); transition: var(--tr);
+    }
+    .lume-close:hover { background: #fff; transform: scale(1.06); }
+    @keyframes lumeFade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes lumePop { from { opacity: 0; transform: translate(-50%,-46%) scale(.96); } to { opacity: 1; transform: translate(-50%,-50%) scale(1); } }
+
     /* ═══════════════════════════════════════════════
        RESPONSIVE
        ═══════════════════════════════════════════════ */
@@ -717,7 +739,7 @@
         <a href="#antes-depois">Resultados</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#agendamento">Contato</a>
-        <a href="#agendamento" class="btn nav-cta">Agendar</a>
+        <a href="#agendamento" class="btn nav-cta" data-lume-agendar>Agendar</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -736,7 +758,7 @@
           <h1><span class="accent-text">Realce o que já é bonito</span> em você.</h1>
           <p>Lash Lifting e Brow Lamination que valorizam a sua beleza natural — com técnica, delicadeza e um olhar único para o seu rosto.</p>
           <div class="hero-ctas">
-            <a href="#agendamento" class="btn">Agendar meu horário</a>
+            <a href="#agendamento" class="btn" data-lume-agendar>Agendar meu horário</a>
             <a href="#sobre" class="btn-ghost">Conhecer a Júlia</a>
           </div>
         </div>
@@ -872,7 +894,7 @@
           <p>Sou a Júlia Roberta, especialista em Lash Lifting e Brow Lamination em Cerquilho-SP. Acredito que cada rosto tem a sua própria beleza — e o meu trabalho é realçar isso com naturalidade e cuidado.</p>
           <p>Mais do que um procedimento, entrego autoestima e um atendimento que respeita o que você gosta. Hoje também formo profissionais por todo o Brasil, levando técnica e excelência para mais mulheres.</p>
           <div class="about-sign">Júlia Roberta</div>
-          <a href="#agendamento" class="btn">Quero ser atendida</a>
+          <a href="#agendamento" class="btn" data-lume-agendar>Quero ser atendida</a>
         </div>
       </div>
     </div>
@@ -905,7 +927,7 @@
               Atendimento personalizado do início ao fim
             </li>
           </ul>
-          <a href="#agendamento" class="btn">Agendar meu horário</a>
+          <a href="#agendamento" class="btn" data-lume-agendar>Agendar meu horário</a>
         </div>
         <div class="fi-r">
           <div class="img-frame why-img" data-label="Foto Júlia — atendimento">
@@ -1037,16 +1059,7 @@
 
           <div class="book-cta">
             <p>Escolha o melhor dia e horário para o seu atendimento:</p>
-
-            <!-- ═══════════════════════════════════════════════════════════
-                 SISTEMA DE AGENDAMENTO
-                 Cole aqui o embed/iframe/script do seu sistema interno.
-                 Ex.: <iframe src="https://seu-sistema.com/agenda" ...></iframe>
-                 É só substituir o conteúdo da div abaixo.
-                 ═══════════════════════════════════════════════════════════ -->
-            <div id="sistema-agendamento"></div>
-
-            <a href="https://wa.me/5515997138691?text=Ol%C3%A1%2C%20J%C3%BAlia!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20%F0%9F%8C%9F" target="_blank" rel="noopener noreferrer" class="btn btn-full">Agendar pelo WhatsApp</a>
+            <button type="button" class="btn btn-full" data-lume-agendar>Agendar horário</button>
           </div>
         </div>
 
@@ -1100,6 +1113,16 @@
       </div>
     </div>
     <button class="stories-arrow next" id="storyNext" aria-label="Próximo"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+
+  <!-- modal de agendamento (Lume) -->
+  <div class="lume-modal" id="lumeModal" aria-hidden="true">
+    <div class="lume-backdrop" data-lume-close></div>
+    <div class="lume-dialog" role="dialog" aria-modal="true" aria-label="Agendar horário">
+      <button type="button" class="lume-close" data-lume-close aria-label="Fechar">&times;</button>
+      <div class="lume-loading">Carregando agendamento…</div>
+      <iframe id="lumeFrame" title="Agendar horário com a Júlia Roberta" src="about:blank"></iframe>
+    </div>
   </div>
 
   <!-- floating whatsapp -->
@@ -1194,11 +1217,36 @@
       const waFloat = document.getElementById('waFloat');
       if (waFloat) waFloat.addEventListener('click', e => { e.preventDefault(); openWA(false); });
 
+      /* ── modal de agendamento (Lume) ── */
+      (function () {
+        const URL_AGENDA = 'https://lume-agendamentos.vercel.app/agendar/julia-roberta-beauty';
+        const modal = document.getElementById('lumeModal');
+        const frame = document.getElementById('lumeFrame');
+        if (modal && frame) {
+          const openModal = () => {
+            if (frame.getAttribute('src') !== URL_AGENDA) frame.setAttribute('src', URL_AGENDA);
+            modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+          };
+          const closeModal = () => {
+            modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+          };
+          document.querySelectorAll('[data-lume-agendar]').forEach(el =>
+            el.addEventListener('click', e => { e.preventDefault(); openModal(); }));
+          modal.querySelectorAll('[data-lume-close]').forEach(el =>
+            el.addEventListener('click', closeModal));
+          document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+          });
+        }
+      })();
+
       /* ── smooth scroll ── */
       document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
-          if (href === '#') return;
+          if (href === '#' || this.hasAttribute('data-lume-agendar')) return;
           const t = document.querySelector(href);
           if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
         });
