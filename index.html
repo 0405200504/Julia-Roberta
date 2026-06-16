@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Júlia Roberta — Lash Lifting & Brow Lamination | Cerquilho-SP</title>
   <meta name="description" content="Lash Lifting e Brow Lamination em Cerquilho-SP. Realce sua beleza natural com técnica, delicadeza e um olhar único. Agende com a Júlia Roberta." />
-  <meta name="theme-color" content="#FAF5F1" />
+  <meta name="theme-color" content="#F7F2E9" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Júlia Roberta — Lash & Brow Designer | Cerquilho-SP" />
@@ -14,7 +14,7 @@
   <meta property="og:image" content="assets/img/hero.jpg" />
 
   <!-- Favicon (monograma) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23CFA1A0'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='600' fill='white' text-anchor='middle'%3EJR%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23875F46'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='600' fill='white' text-anchor='middle'%3EJR%3C/text%3E%3C/svg%3E" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +28,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #FAF5F1;
+      background: #F7F2E9;
       color: #2C2A29;
       line-height: 1.7;
       overflow-x: hidden;
@@ -39,16 +39,16 @@
 
     /* ── TOKENS ── */
     :root {
-      --bg-1: #FAF5F1;
-      --bg-2: #F4E9E5;
+      --bg-1: #F7F2E9;
+      --bg-2: #EFE6D6;
       --bg-3: #FFFFFF;
       --card: #FFFFFF;
-      --rose: #CFA1A0;
-      --rose-dark: #B9847F;
-      --rose-light: #E2BEBC;
-      --champagne: #EAC9CB;
-      --champagne-light: #F2DAD8;
-      --rose-gradient: linear-gradient(135deg, #CFA1A0, #E2BEBC, #EAC9CB);
+      --rose: #D3BA9C;
+      --rose-dark: #875F46;
+      --rose-light: #DAC4AB;
+      --champagne: #DFCDB8;
+      --champagne-light: #E6D7C6;
+      --rose-gradient: linear-gradient(135deg, #6E4B35, #875F46, #A87F5C);
       --text-dark: #2C2A29;
       --text-body: #6E635D;
       --text-muted: #A99E98;
@@ -62,14 +62,14 @@
 
     /* ── UTILITIES ── */
     .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 28px; }
-    .accent-text { color: var(--rose); }
+    .accent-text { color: #875F46; }
     section[id] { scroll-margin-top: 84px; }
 
     .kicker {
       display: inline-block;
       font-family: var(--sans); font-size: .72rem; font-weight: 500;
       letter-spacing: .28em; text-transform: uppercase;
-      color: var(--rose); margin-bottom: 18px;
+      color: #875F46; margin-bottom: 18px;
     }
     .kicker::before {
       content: ''; display: inline-block; width: 26px; height: 1px;
@@ -85,7 +85,7 @@
       letter-spacing: .01em;
       color: var(--text-dark);
     }
-    .section-title.accent-text { color: var(--rose); }
+    .section-title.accent-text { color: #875F46; }
     .section-sub {
       text-align: center; max-width: 540px; margin: 0 auto;
       color: var(--text-body); font-size: .95rem; font-weight: 300;
@@ -102,7 +102,7 @@
     /* ── IMAGE FRAME (com fallback elegante) ── */
     .img-frame {
       position: relative; overflow: hidden;
-      background: #EDE3DD; border: 1px solid #E2D6CF;
+      background: #ECE3D2; border: 1px solid #E1D4BE;
       flex-shrink: 0;
     }
     .img-frame::after {
@@ -123,13 +123,13 @@
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 15px 34px;
-      background: var(--rose);
+      background: var(--rose-dark);
       color: #fff; font-family: var(--sans); font-size: .82rem; font-weight: 600;
       letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
       border: none; border-radius: 6px; cursor: pointer;
       position: relative; overflow: hidden;
       transition: var(--tr);
-      box-shadow: 0 4px 24px rgba(207,161,160,.3);
+      box-shadow: 0 4px 24px rgba(135,95,70,.32);
     }
     .btn::before {
       content: ''; position: absolute; inset: 0;
@@ -137,18 +137,18 @@
       transform: translateX(-100%); transition: transform .6s;
     }
     .btn:hover::before { transform: translateX(100%); }
-    .btn:hover { transform: translateY(-2px); background: var(--rose-dark); box-shadow: 0 8px 32px rgba(207,161,160,.4); }
+    .btn:hover { transform: translateY(-2px); background: #6E4B35; box-shadow: 0 8px 32px rgba(135,95,70,.42); }
 
     .btn-ghost {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 15px 30px;
-      background: transparent; color: var(--rose);
+      background: transparent; color: #875F46;
       font-family: var(--sans); font-size: .82rem; font-weight: 600;
       letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
-      border: 1.5px solid rgba(207,161,160,.5); border-radius: 6px; cursor: pointer;
+      border: 1.5px solid rgba(211,186,156,.5); border-radius: 6px; cursor: pointer;
       transition: var(--tr);
     }
-    .btn-ghost:hover { background: rgba(207,161,160,.08); border-color: var(--rose); transform: translateY(-2px); }
+    .btn-ghost:hover { background: rgba(211,186,156,.08); border-color: var(--rose); transform: translateY(-2px); }
 
     /* ── FADE ANIMATIONS ── */
     .fi { opacity: 0; transform: translateY(35px); transition: opacity .75s ease, transform .75s ease; }
@@ -175,11 +175,11 @@
       transition: var(--tr);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; padding-bottom: 20px; transition: var(--tr); }
-    .nav.scrolled { background: rgba(250,245,241,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,.05); }
+    .nav.scrolled { background: rgba(247,242,233,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,.05); }
     .nav.scrolled .nav-inner { padding-top: 13px; padding-bottom: 13px; }
 
     .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-    .nav-mono { font-family: var(--serif); font-size: 1.55rem; font-weight: 600; color: var(--rose); letter-spacing: .08em; line-height: 1; }
+    .nav-mono { font-family: var(--serif); font-size: 1.55rem; font-weight: 600; color: #875F46; letter-spacing: .08em; line-height: 1; }
     .nav-name { font-family: var(--sans); font-size: .66rem; letter-spacing: .26em; text-transform: uppercase; color: var(--text-dark); font-weight: 500; }
 
     .nav-links { display: flex; gap: 32px; align-items: center; }
@@ -189,7 +189,7 @@
       transition: color var(--tr); position: relative;
     }
     .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 0; height: 1.5px; background: var(--rose); transition: width .3s; }
-    .nav-links a:hover { color: var(--rose); }
+    .nav-links a:hover { color: #875F46; }
     .nav-links a:hover::after { width: 100%; }
 
     .nav-cta { padding: 10px 24px; font-size: .72rem; box-shadow: none; }
@@ -211,7 +211,7 @@
        1. HERO
        ═══════════════════════════════════════════════ */
     .hero {
-      background: linear-gradient(180deg, #F6E7E5 0%, #FAF5F1 60%, var(--bg-1) 100%);
+      background: linear-gradient(180deg, #F1E7D4 0%, #F7F2E9 60%, var(--bg-1) 100%);
       min-height: 100vh;
       display: flex; align-items: center;
       position: relative;
@@ -236,7 +236,7 @@
       width: 100%; max-width: 410px;
       aspect-ratio: 3/4; border-radius: var(--r);
       position: relative; z-index: 2;
-      box-shadow: 0 24px 60px rgba(185,132,127,.22);
+      box-shadow: 0 24px 60px rgba(135,95,70,.18);
     }
     .hero-badge {
       position: absolute; bottom: 22px; left: -18px; z-index: 3;
@@ -252,7 +252,7 @@
     .hero::after {
       content: ''; position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%);
       width: 520px; height: 520px;
-      background: radial-gradient(circle, rgba(207,161,160,.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(211,186,156,.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -262,13 +262,13 @@
     .stats {
       background: var(--bg-2);
       padding: 46px 0;
-      border-top: 1px solid rgba(207,161,160,.18);
-      border-bottom: 1px solid rgba(207,161,160,.18);
+      border-top: 1px solid rgba(211,186,156,.18);
+      border-bottom: 1px solid rgba(211,186,156,.18);
     }
     .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; text-align: center; }
     .stat-num {
       font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 600;
-      color: var(--rose); line-height: 1.2;
+      color: #875F46; line-height: 1.2;
     }
     .stat-lbl { color: var(--text-body); font-size: .8rem; font-weight: 300; margin-top: 4px; letter-spacing: .03em; }
 
@@ -276,7 +276,7 @@
        3. TREATMENTS
        ═══════════════════════════════════════════════ */
     .treatments { background: var(--bg-1); padding: var(--pad); }
-    .treat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; max-width: 720px; margin: 0 auto; }
+    .treat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; max-width: 1080px; margin: 0 auto; }
     .treat-card {
       background: var(--card); border-radius: var(--r); overflow: hidden;
       border: 1px solid rgba(0,0,0,.06);
@@ -285,16 +285,16 @@
     }
     .treat-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(207,161,160,.3);
+      border-color: rgba(211,186,156,.3);
       box-shadow: 0 16px 48px rgba(0,0,0,.08);
     }
     .treat-icon {
       width: 64px; height: 64px; margin: 0 auto 20px;
-      border-radius: 50%; background: rgba(207,161,160,.12);
+      border-radius: 50%; background: rgba(211,186,156,.12);
       display: flex; align-items: center; justify-content: center;
       transition: var(--tr);
     }
-    .treat-card:hover .treat-icon { background: rgba(207,161,160,.2); }
+    .treat-card:hover .treat-icon { background: rgba(211,186,156,.2); }
     .treat-icon svg { width: 30px; height: 30px; stroke: var(--rose); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
     .treat-card h3 {
       font-family: var(--serif); font-size: 1.32rem; font-weight: 600; margin-bottom: 10px;
@@ -312,7 +312,7 @@
     .about-main { width: 78%; aspect-ratio: 4/5; border-radius: 200px 200px 16px 16px; }
     .about-main::before {
       content: ''; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
-      border-radius: 210px 210px 24px 24px; border: 1.5px solid rgba(207,161,160,.4); pointer-events: none; z-index: 2;
+      border-radius: 210px 210px 24px 24px; border: 1.5px solid rgba(211,186,156,.4); pointer-events: none; z-index: 2;
     }
     .about-sub {
       position: absolute; right: 0; bottom: -28px; width: 46%; aspect-ratio: 3/4;
@@ -327,7 +327,7 @@
     .about-text p { color: var(--text-body); font-size: .95rem; font-weight: 300; line-height: 1.9; margin-bottom: 18px; }
     .about-sign {
       font-family: var(--serif); font-style: italic; font-size: 1.5rem;
-      color: var(--rose); margin: 8px 0 30px;
+      color: #875F46; margin: 8px 0 30px;
     }
 
     /* ═══════════════════════════════════════════════
@@ -347,7 +347,7 @@
     }
     .chk {
       flex-shrink: 0; width: 24px; height: 24px;
-      border-radius: 50%; background: rgba(207,161,160,.16);
+      border-radius: 50%; background: rgba(211,186,156,.16);
       display: flex; align-items: center; justify-content: center; margin-top: 2px;
     }
     .chk svg { width: 13px; height: 13px; }
@@ -364,7 +364,7 @@
       text-align: center; transition: var(--tr);
       box-shadow: 0 2px 16px rgba(0,0,0,.04);
     }
-    .testi-card:hover { border-color: rgba(207,161,160,.3); transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,.07); }
+    .testi-card:hover { border-color: rgba(211,186,156,.3); transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,.07); }
     .testi-avatar {
       width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 16px;
       background: var(--rose-gradient); color: #fff;
@@ -375,7 +375,7 @@
     .testi-stars svg { width: 16px; height: 16px; }
     .testi-quote { color: var(--text-body); font-size: .9rem; font-style: italic; font-weight: 300; line-height: 1.75; margin-bottom: 16px; }
     .testi-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--text-dark); }
-    .testi-svc { font-size: .72rem; color: var(--rose); letter-spacing: .06em; text-transform: uppercase; margin-top: 3px; }
+    .testi-svc { font-size: .72rem; color: #875F46; letter-spacing: .06em; text-transform: uppercase; margin-top: 3px; }
 
     /* ═══════════════════════════════════════════════
        7. INSTAGRAM CTA
@@ -432,12 +432,12 @@
     }
     .fg input, .fg select, .fg textarea {
       width: 100%; padding: 13px 14px;
-      background: #FAF6F2; border: 1px solid rgba(0,0,0,.1);
+      background: #F8F4EC; border: 1px solid rgba(0,0,0,.1);
       border-radius: 6px; color: var(--text-dark);
       font-family: var(--sans); font-size: .87rem; font-weight: 300;
       transition: border-color var(--tr), box-shadow var(--tr); outline: none;
     }
-    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(207,161,160,.15); }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(211,186,156,.15); }
     .fg select {
       appearance: none; -webkit-appearance: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236E635D' d='M6 8.825L0.375 3.2h11.25L6 8.825z'/%3E%3C/svg%3E");
@@ -453,19 +453,19 @@
     .btn-wa {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       width: 100%; padding: 14px;
-      background: transparent; border: 1px solid rgba(207,161,160,.45);
-      color: var(--rose); font-family: var(--sans); font-size: .8rem;
+      background: transparent; border: 1px solid rgba(211,186,156,.45);
+      color: #875F46; font-family: var(--sans); font-size: .8rem;
       font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
       text-decoration: none; border-radius: 6px; cursor: pointer; transition: var(--tr);
     }
-    .btn-wa:hover { background: rgba(207,161,160,.08); border-color: var(--rose); }
+    .btn-wa:hover { background: rgba(211,186,156,.08); border-color: var(--rose); }
     .btn-wa svg { width: 18px; height: 18px; }
 
     /* ═══════════════════════════════════════════════
        9. FOOTER
        ═══════════════════════════════════════════════ */
     .footer { background: var(--bg-2); padding: 56px 0 28px; text-align: center; border-top: 1px solid rgba(0,0,0,.06); }
-    .footer .monogram { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--rose); letter-spacing: .12em; margin-bottom: 10px; }
+    .footer .monogram { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: #875F46; letter-spacing: .12em; margin-bottom: 10px; }
     .footer-brand {
       font-family: var(--sans); font-size: .8rem; letter-spacing: .15em;
       text-transform: uppercase; color: var(--text-body); font-weight: 300; margin-bottom: 22px;
@@ -476,7 +476,7 @@
       color: var(--text-body); text-decoration: none; font-size: .82rem;
       font-weight: 400; transition: color var(--tr);
     }
-    .footer-social a:hover { color: var(--rose); }
+    .footer-social a:hover { color: #875F46; }
     .footer-social a svg { width: 18px; height: 18px; }
     .footer-city { color: var(--text-body); font-size: .78rem; font-weight: 300; margin-bottom: 18px; }
     .footer-copy { color: rgba(44,42,41,.4); font-size: .7rem; font-weight: 300; }
@@ -503,12 +503,16 @@
       margin-bottom: 14px; overflow: hidden; transition: var(--tr);
       box-shadow: 0 2px 14px rgba(0,0,0,.03);
     }
-    .svc-item.open { border-color: rgba(207,161,160,.45); box-shadow: 0 12px 34px rgba(0,0,0,.07); }
+    .svc-item.open { border-color: rgba(211,186,156,.45); box-shadow: 0 12px 34px rgba(0,0,0,.07); }
     .svc-head { display: flex; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer; user-select: none; }
-    .svc-ic { width: 48px; height: 48px; border-radius: 50%; background: rgba(207,161,160,.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: var(--tr); }
-    .svc-item.open .svc-ic { background: rgba(207,161,160,.22); }
+    .svc-ic { width: 48px; height: 48px; border-radius: 50%; background: rgba(211,186,156,.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: var(--tr); }
+    .svc-item.open .svc-ic { background: rgba(211,186,156,.22); }
     .svc-ic svg { width: 23px; height: 23px; stroke: var(--rose); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
     .svc-head h3 { font-family: var(--serif); font-size: 1.22rem; font-weight: 600; color: var(--text-dark); flex: 1; }
+    .svc-price { flex-shrink: 0; font-family: var(--sans); font-size: .82rem; font-weight: 600; color: #875F46; background: rgba(211,186,156,.18); padding: 5px 12px; border-radius: 20px; white-space: nowrap; letter-spacing: .01em; }
+    @media (max-width: 560px) { .svc-price { display: none; } }
+    .svc-body-inner .svc-price-inline { display: none; }
+    @media (max-width: 560px) { .svc-body-inner .svc-price-inline { display: block; margin-top: 14px; font-family: var(--sans); font-size: .95rem; font-weight: 600; color: #875F46; } }
     .svc-plus { width: 22px; height: 22px; position: relative; flex-shrink: 0; }
     .svc-plus::before, .svc-plus::after { content: ''; position: absolute; background: var(--rose); border-radius: 2px; }
     .svc-plus::before { top: 10px; left: 1px; right: 1px; height: 2px; }
@@ -516,7 +520,7 @@
     .svc-item.open .svc-plus::after { transform: scaleY(0); }
     .svc-body { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.25,.46,.45,.94); }
     .svc-body-inner { padding: 0 24px 24px 88px; color: var(--text-body); font-size: .92rem; font-weight: 300; line-height: 1.85; }
-    .svc-body-inner .svc-tag { display: inline-block; margin-top: 12px; font-size: .72rem; letter-spacing: .04em; color: var(--rose); font-weight: 500; }
+    .svc-body-inner .svc-tag { display: inline-block; margin-top: 12px; font-size: .72rem; letter-spacing: .04em; color: #875F46; font-weight: 500; }
 
     /* ═══════════════════════════════════════════════
        DEPOIMENTOS — CARROSSEL
@@ -528,12 +532,12 @@
     }
     .testi-carousel::-webkit-scrollbar { height: 6px; }
     .testi-carousel::-webkit-scrollbar-track { background: transparent; }
-    .testi-carousel::-webkit-scrollbar-thumb { background: rgba(207,161,160,.4); border-radius: 3px; }
+    .testi-carousel::-webkit-scrollbar-thumb { background: rgba(211,186,156,.4); border-radius: 3px; }
     .depo-card {
       flex: 0 0 auto; width: 248px; aspect-ratio: 9 / 16; scroll-snap-align: center;
       border-radius: 16px; overflow: hidden; cursor: pointer; position: relative;
       border: 1px solid rgba(0,0,0,.06); box-shadow: 0 6px 20px rgba(0,0,0,.08);
-      transition: var(--tr); background: #EDE3DD;
+      transition: var(--tr); background: #ECE3D2;
     }
     .depo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .depo-card:hover { transform: translateY(-5px); box-shadow: 0 16px 38px rgba(0,0,0,.16); }
@@ -548,13 +552,23 @@
     .depo-play svg { width: 12px; height: 12px; fill: #fff; }
     .carousel-nav { display: flex; justify-content: center; gap: 14px; margin-top: 6px; }
     .carousel-btn {
-      width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(207,161,160,.5);
+      width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(211,186,156,.5);
       background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--tr);
     }
     .carousel-btn:hover { background: var(--rose); border-color: var(--rose); transform: translateY(-2px); }
     .carousel-btn svg { width: 18px; height: 18px; stroke: var(--rose); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: var(--tr); }
     .carousel-btn:hover svg { stroke: #fff; }
-    .testi-actions { text-align: center; margin-top: 34px; }
+    .testi-actions { text-align: center; margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn-google {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 28px; background: #fff; border: 1px solid rgba(0,0,0,.1);
+      border-radius: 6px; color: var(--text-dark); text-decoration: none;
+      font-family: var(--sans); font-size: .82rem; font-weight: 600;
+      letter-spacing: .04em; transition: var(--tr); box-shadow: 0 4px 18px rgba(0,0,0,.05);
+    }
+    .btn-google:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(0,0,0,.09); border-color: rgba(211,186,156,.5); }
+    .btn-google svg { width: 18px; height: 18px; }
+    .btn-google .g-stars { color: #875F46; font-size: .82rem; letter-spacing: .06em; }
 
     /* ═══════════════════════════════════════════════
        STORIES (visualizador estilo Instagram)
@@ -604,10 +618,10 @@
     }
     .ba-carousel::-webkit-scrollbar { height: 6px; }
     .ba-carousel::-webkit-scrollbar-track { background: transparent; }
-    .ba-carousel::-webkit-scrollbar-thumb { background: rgba(207,161,160,.4); border-radius: 3px; }
+    .ba-carousel::-webkit-scrollbar-thumb { background: rgba(211,186,156,.4); border-radius: 3px; }
     .ba-slide {
       flex: 0 0 auto; width: clamp(240px, 30vw, 300px); aspect-ratio: 9 / 16; scroll-snap-align: center;
-      border-radius: 16px; overflow: hidden; position: relative; background: #F1E7E2;
+      border-radius: 16px; overflow: hidden; position: relative; background: #ECE2D1;
       box-shadow: 0 6px 22px rgba(0,0,0,.12); line-height: 0;
     }
     .ba-slide img, .ba-slide video { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -714,13 +728,13 @@
   <svg style="position:absolute;width:0;height:0" aria-hidden="true">
     <defs>
       <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#CFA1A0"/>
-        <stop offset="50%" stop-color="#E2BEBC"/>
-        <stop offset="100%" stop-color="#EAC9CB"/>
+        <stop offset="0%" stop-color="#D3BA9C"/>
+        <stop offset="50%" stop-color="#875F46"/>
+        <stop offset="100%" stop-color="#D3BA9C"/>
       </linearGradient>
       <linearGradient id="chkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#CFA1A0"/>
-        <stop offset="100%" stop-color="#E2BEBC"/>
+        <stop offset="0%" stop-color="#875F46"/>
+        <stop offset="100%" stop-color="#D3BA9C"/>
       </linearGradient>
     </defs>
   </svg>
@@ -755,9 +769,9 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-txt fi-l">
-          <span class="kicker">Lash &amp; Brow Designer · Cerquilho-SP</span>
+          <span class="kicker">Especialista em beleza natural · Cerquilho-SP</span>
           <h1><span class="accent-text">Realce o que já é bonito</span> em você.</h1>
-          <p>Lash Lifting e Brow Lamination que valorizam a sua beleza natural — com técnica, delicadeza e um olhar único para o seu rosto.</p>
+          <p>Sobrancelhas e Lash Lifting feitos para parecer que você nasceu assim — sem exagero, com delicadeza e elegância.</p>
           <div class="hero-ctas">
             <a href="#agendamento" class="btn" data-lume-agendar>Agendar meu horário</a>
             <a href="#sobre" class="btn-ghost">Conhecer a Júlia</a>
@@ -774,11 +788,11 @@
           <div class="hero-badge">
             <div>
               <div class="hb-stars">
-                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-                <svg viewBox="0 0 24 24" fill="#CFA1A0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#875F46"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#875F46"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#875F46"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#875F46"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="#875F46"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
               </div>
               <div class="hb-txt"><b>5.0</b> · centenas de clientes satisfeitas</div>
             </div>
@@ -799,7 +813,7 @@
           <div class="stat-lbl">com alunas formadas pelo Brasil</div>
         </div>
         <div>
-          <div class="stat-num">+500</div>
+          <div class="stat-num">+5.000</div>
           <div class="stat-lbl">atendimentos realizados</div>
         </div>
         <div>
@@ -820,17 +834,24 @@
       <div class="treat-grid stagger">
         <div class="treat-card">
           <div class="treat-icon">
-            <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M2 13c3.5-4.5 16.5-4.5 20 0c-3.5 4.5-16.5 4.5-20 0z"/><circle cx="12" cy="13" r="2.4"/><path d="M7 8.6l-1-2.1"/><path d="M12 7.6V5.2"/><path d="M17 8.6l1-2.1"/></svg>
           </div>
           <h3>Lash Lifting</h3>
           <p>Curvatura natural e duradoura para os seus cílios, sem extensões. Técnica segura e delicada.</p>
         </div>
         <div class="treat-card">
           <div class="treat-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 21l6-6"/><path d="M9 15l-2-2"/><path d="M14 10l-4 4 2 2 4-4z"/><path d="M14 10l5-5a2.5 2.5 0 013.5 3.5l-5 5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M3 15c5-6 13-6 18 0"/><path d="M7 12.6l-.7-3"/><path d="M11.2 11.5l-.2-3.2"/><path d="M15 11.7l.6-3"/><path d="M18.3 13l1-2.6"/></svg>
           </div>
           <h3>Brow Lamination</h3>
           <p>Fios alinhados e preenchidos para um efeito de sobrancelhas mais cheias e definidas.</p>
+        </div>
+        <div class="treat-card">
+          <div class="treat-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 21C5 14 6.5 8 10 4"/><path d="M11 21C11 15 12 10 14.5 6"/><path d="M17 21c0-5 .8-9 2.5-12"/></svg>
+          </div>
+          <h3>Nanofios</h3>
+          <p>Desenho de fios realistas para tampar falhas e melhorar o formato, com durabilidade de até 8 meses.</p>
         </div>
       </div>
     </div>
@@ -848,25 +869,130 @@
       <div class="svc-acc fi">
         <div class="svc-item">
           <div class="svc-head">
-            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
-            <h3>Lash Lifting</h3>
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M9.3 2l2.2 12.6"/><path d="M14.7 2l-2.2 12.6"/><path d="M11.5 14.6c.3.4.7.4 1 0"/><path d="M12 15v7"/></svg></span>
+            <h3>Design de Sobrancelhas</h3>
+            <span class="svc-price">R$60</span>
             <span class="svc-plus"></span>
           </div>
           <div class="svc-body"><div class="svc-body-inner">
-            O efeito de cílios curvados, levantados e alongados usando os seus próprios fios — sem extensões. Entender a química, a estrutura do fio e cada tipo de cílio e pálpebra faz toda a diferença no resultado natural e duradouro. Dura em média de 6 a 8 semanas.
-            <span class="svc-tag">Ideal para quem quer acordar com o olhar pronto, sem maquiagem</span>
+            No design de sobrancelhas tradicional fazemos a epilação dos pelos com a pinça, cera fria ou linha (epilação egípcia). O formato será sempre de acordo com a preferência de cada cliente.
+            <span class="svc-tag">Ideal para quem quer um desenho limpo e personalizado</span>
+            <span class="svc-price-inline">A partir de R$60</span>
           </div></div>
         </div>
 
         <div class="svc-item">
           <div class="svc-head">
-            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M3 21l6-6"/><path d="M14 10l-4 4 2 2 4-4z"/><path d="M14 10l5-5a2.5 2.5 0 013.5 3.5l-5 5z"/></svg></span>
-            <h3>Brow Lamination</h3>
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M12 2s6 7 6 11a6 6 0 01-12 0c0-4 6-11 6-11z"/></svg></span>
+            <h3>Design com Henna</h3>
+            <span class="svc-price">R$70</span>
             <span class="svc-plus"></span>
           </div>
           <div class="svc-body"><div class="svc-body-inner">
-            Um alinhamento que disciplina e fixa os fios para cima, criando o efeito de sobrancelhas mais cheias, volumosas e penteadas. Excelente para quem tem fios rebeldes ou deseja um visual moderno e bem definido, mantendo a naturalidade.
+            No design com aplicação de henna fazemos a epilação dos pelos e, no final, a aplicação da henna de acordo com o tom de pele e pelo da cliente e seus gostos pessoais (mais natural ou mais marcado). A henna pigmenta a pele e tem duração média de 3 a 7 dias, dependendo de cada pele e dos cuidados.
+            <span class="svc-tag">Ideal para preencher falhas e marcar o formato por alguns dias</span>
+            <span class="svc-price-inline">R$70</span>
+          </div></div>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M9 9h6v10a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/><path d="M10 9V4h4v5"/><path d="M9 14h6"/></svg></span>
+            <h3>Design com Tintura</h3>
+            <span class="svc-price">R$70</span>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            A tintura, diferente da henna, pigmenta apenas os pelos e levemente a pele, deixando um resultado mais sutil e natural. Tem duração de 10 a 20 dias no pelo, dependendo do ciclo de crescimento dos pelos de cada cliente.
+            <span class="svc-tag">Ideal para um resultado discreto e natural</span>
+            <span class="svc-price-inline">R$70</span>
+          </div></div>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M12 12C12 8 9 6 5 6c0 4 3 6 7 6z"/><path d="M12 12c0-3 3-5 7-5 0 3-3 5-7 5z"/></svg></span>
+            <h3>Reconstrução das Sobrancelhas</h3>
+            <span class="svc-price">R$75 a R$100</span>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            Indicado para clientes que desejam estimular o crescimento dos fios, tratar falhas, fortalecer a estrutura dos pelos e manter a saúde da região de forma natural. Você escolhe entre duas opções, de acordo com a sua necessidade:
+            <br/><br/>
+            <strong>Tratamento Intensivo de Crescimento (com microagulhamento) — R$100</strong><br/>
+            Para quem apresenta maior grau de falhas ou pelos prejudicados e deseja acelerar o crescimento dos fios. Inclui argiloterapia para desobstrução dos poros, design reconstrutivo personalizado e microagulhamento com dermapen para ativar a circulação local e estimular o crescimento. Resultados mais rápidos e visíveis — recomendado 3 sessões para ver os primeiros resultados. <em>Sessão única R$100.</em>
+            <br/><br/>
+            <strong>Tratamento Preventivo e de Manutenção — R$75</strong><br/>
+            Para quem já possui boa densidade de pelos e deseja evitar falhas futuras, mantendo os fios saudáveis e fortalecidos. Hoje muitas clientes substituem o design comum por esse tratamento, indicado para todos. Inclui argiloterapia (ação detox), design reconstrutivo e aplicação de sérum fortalecedor na finalização, promovendo um crescimento equilibrado e natural ao longo do tempo.
+            <span class="svc-tag">Ideal para tratar falhas e manter os fios fortes e saudáveis</span>
+            <span class="svc-price-inline">Intensivo R$100 · Preventivo R$75</span>
+          </div></div>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M3 15c5-6 13-6 18 0"/><path d="M7 12.6l-.7-3"/><path d="M11.2 11.5l-.2-3.2"/><path d="M15 11.7l.6-3"/><path d="M18.3 13l1-2.6"/></svg></span>
+            <h3>Brow Lamination</h3>
+            <span class="svc-price">R$130</span>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            Técnica que deixa os fios mais alinhados e volumosos, ajudando a preencher falhas e a criar um visual mais natural — uma das principais tendências da área hoje. Proporciona desde um resultado bem sutil até o mais selvagem, com fios projetados para cima, conforme o gosto da cliente. O efeito alisado não fica rígido o tempo todo; basta passar um gelzinho fixador para manter os fios no lugar o dia todo. A durabilidade é de 4 a 6 semanas, dependendo do crescimento natural dos pelos. Além do procedimento, é realizado um tratamento de nutrição para manter o fio saudável e hidratado.
             <span class="svc-tag">Ideal para fios rebeldes ou para um efeito mais volumoso</span>
+            <span class="svc-price-inline">R$130</span>
+          </div></div>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M2 13c3.5-4.5 16.5-4.5 20 0c-3.5 4.5-16.5 4.5-20 0z"/><circle cx="12" cy="13" r="2.4"/><path d="M7 8.6l-1-2.1"/><path d="M12 7.6V5.2"/><path d="M17 8.6l1-2.1"/></svg></span>
+            <h3>Lash Lifting</h3>
+            <span class="svc-price">R$160</span>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            Procedimento que curva, levanta e alinha os cílios naturais desde a raiz, criando o efeito de cílios mais longos, definidos e organizados — sem alongamentos ou fios postiços. Indicado para cílios retos, caídos ou desalinhados e para quem busca praticidade na rotina, realçando o olhar de forma discreta e natural. O resultado dura de 6 a 8 semanas, não exige manutenção e permite uso normal de maquiagem, rímel e contato com água. Inclui um tratamento de nutrição para os fios após o procedimento. Tempo de realização: de 1h30 a 2h.
+            <span class="svc-tag">Ideal para acordar com o olhar pronto todos os dias</span>
+            <span class="svc-price-inline">R$160</span>
+          </div></div>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="12" rx="1.5"/><path d="M12 9v12"/><path d="M3.5 14h17"/><path d="M12 9C12 9 10.5 3.8 7.9 4.4 5.9 4.9 7 9 12 9z"/><path d="M12 9C12 9 13.5 3.8 16.1 4.4 18.1 4.9 17 9 12 9z"/></svg></span>
+            <h3>Combo: Lash Lifting + Brow Lamination</h3>
+            <span class="svc-price">R$290</span>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            Os procedimentos mais amados da clínica juntos, com um presente especial. Faça o combo e <strong>ganhe o Design + SPA dos Lábios</strong>.
+            <span class="svc-tag">Ideal para uma transformação completa do olhar e das sobrancelhas</span>
+            <span class="svc-price-inline">R$290</span>
+          </div></div>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-head">
+            <span class="svc-ic"><svg viewBox="0 0 24 24"><path d="M5 21C5 14 6.5 8 10 4"/><path d="M11 21C11 15 12 10 14.5 6"/><path d="M17 21c0-5 .8-9 2.5-12"/></svg></span>
+            <h3>Nanofios</h3>
+            <span class="svc-price">R$200 a R$500</span>
+            <span class="svc-plus"></span>
+          </div>
+          <div class="svc-body"><div class="svc-body-inner">
+            Técnica moderna de micropigmentação que preenche falhas e harmoniza as sobrancelhas ao rosto, com prioridade na naturalidade e fios HIPER realistas. O tratamento envolve 2 sessões — a primeira e o retorno após 30 dias, para análise da cicatrização e garantia de um resultado de excelência. É implantada superficialmente e não dói. A nanopigmentação dura de 8 a 12 meses, variando conforme o tipo de pele e o estilo de vida de cada cliente.
+            <br/><br/>
+            <strong>Valores</strong><br/>
+            • 1 ponto específico da sobrancelha: <strong>R$200</strong> (já incluso todo o protocolo).<br/>
+            • Realce completo e mudança de formato (se necessário): <strong>12x de R$47,56 ou R$500 à vista</strong>.
+            <br/><br/>
+            <strong>Incluso no procedimento</strong><br/>
+            • Avaliação pré-procedimento, para alinhamento de expectativas e anamnese (no dia ou alguns dias antes).<br/>
+            • 1ª sessão: desenho mostrado para a cliente aprovar e, em seguida, desenho dos fios nos pontos necessários.<br/>
+            • 2ª sessão (retoque): refazemos os fios que sumiram ou falharam após 1 mês (o que é normal acontecer).<br/>
+            • Kit Home Care com todos os cuidados pós — você não precisa comprar nada para cuidar em casa.<br/>
+            • Todo o protocolo de experiência da clínica e um horário exclusivo só para você.
+            <span class="svc-tag">Ideal para preencher falhas com naturalidade e durabilidade</span>
+            <span class="svc-price-inline">R$200 (1 ponto) · R$500 à vista (completo)</span>
           </div></div>
         </div>
       </div>
@@ -892,7 +1018,7 @@
         <div class="about-text fi-r">
           <span class="kicker">Quem é a Júlia</span>
           <h2><span class="accent-text">Beleza não é padrão,</span><br/>é expressão.</h2>
-          <p>Sou a Júlia Roberta, especialista em Lash Lifting e Brow Lamination em Cerquilho-SP. Acredito que cada rosto tem a sua própria beleza — e o meu trabalho é realçar isso com naturalidade e cuidado.</p>
+          <p>Comecei aos 16 anos atendendo na edícula da casa dos meus pais — de noite, nos fins de semana, entre o cursinho e a escola. Era o jeito que eu tinha encontrado pra me construir. Hoje, 5 anos depois, tenho minha própria sala, privativa e acolhedora, e me tornei referência em Cerquilho por trazer técnicas que a maioria da região ainda não conhecia.</p>
           <p>Mais do que um procedimento, entrego autoestima e um atendimento que respeita o que você gosta. Hoje também formo profissionais por todo o Brasil, levando técnica e excelência para mais mulheres.</p>
           <div class="about-sign">Júlia Roberta</div>
           <a href="#agendamento" class="btn" data-lume-agendar>Quero ser atendida</a>
@@ -1013,6 +1139,11 @@
         </div>
         <div class="testi-actions">
           <button class="btn" id="openStories" type="button">▶ Ver em formato Stories</button>
+          <a class="btn-google" href="https://share.google/e4Yalqth6Fpac66dx" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.11a6.6 6.6 0 010-4.22V7.05H2.18a11 11 0 000 9.9l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 002.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+            <span>Avaliações no Google</span>
+            <span class="g-stars">★ 5.0</span>
+          </a>
         </div>
       </div>
     </div>
@@ -1026,9 +1157,9 @@
       <div class="insta-card fi">
         <h2>Acompanhe os bastidores</h2>
         <p>Resultados reais, dicas e novidades todos os dias. Venha fazer parte do nosso dia a dia no Instagram.</p>
-        <a href="https://instagram.com/juliarobertastudio" target="_blank" rel="noopener noreferrer" class="insta-btn">
+        <a href="https://instagram.com/juliarobertabeauty" target="_blank" rel="noopener noreferrer" class="insta-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          @juliarobertastudio
+          @juliarobertabeauty
         </a>
       </div>
     </div>
@@ -1046,15 +1177,15 @@
         <div class="book-info fi-l">
           <h3>Nosso espaço</h3>
           <div class="info-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#CFA1A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#875F46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <a href="https://maps.google.com/?q=Rua+Professor+Antônio+Carlos+de+Castro,+80,+Cerquilho+SP" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">Rua Professor Antônio Carlos de Castro, 80 — Cerquilho/SP</a>
           </div>
           <div class="info-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#CFA1A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Atendimento com hora marcada · das 9h às 18h</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#875F46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Atendimento com hora marcada · das 9h às 19h</span>
           </div>
           <div class="info-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#CFA1A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#875F46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             <a href="tel:+5515997138691" style="color:inherit;text-decoration:none;">+55 15 99713-8691</a>
           </div>
 
@@ -1083,9 +1214,9 @@
       <div class="monogram">JR</div>
       <div class="footer-brand">Júlia Roberta — Lash Lifting &amp; Brow Lamination</div>
       <div class="footer-social">
-        <a href="https://instagram.com/juliarobertastudio" target="_blank" rel="noopener noreferrer">
+        <a href="https://instagram.com/juliarobertabeauty" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          @juliarobertastudio
+          @juliarobertabeauty
         </a>
       </div>
       <div class="footer-city">Cerquilho — SP</div>
@@ -1102,7 +1233,7 @@
       <div class="stories-bars" id="storyBars"></div>
       <div class="stories-head">
         <span class="sh-av">JR</span>
-        <span class="sh-name">juliarobertastudio<small>depoimentos reais</small></span>
+        <span class="sh-name">juliarobertabeauty<small>depoimentos reais</small></span>
         <button class="stories-close" id="storyClose" aria-label="Fechar">&times;</button>
       </div>
       <div class="stories-imgwrap">
@@ -1204,8 +1335,8 @@
           const f = document.getElementById(id);
           if (!f.value || !f.value.trim()) {
             ok = false;
-            f.style.borderColor = '#CFA1A0';
-            f.style.boxShadow = '0 0 0 3px rgba(207,161,160,.2)';
+            f.style.borderColor = '#D3BA9C';
+            f.style.boxShadow = '0 0 0 3px rgba(211,186,156,.2)';
             setTimeout(() => { f.style.borderColor = ''; f.style.boxShadow = ''; }, 2200);
           }
         });
